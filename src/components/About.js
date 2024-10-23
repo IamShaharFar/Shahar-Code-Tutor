@@ -7,7 +7,7 @@ function About() {
       <Row className="align-items-center">
         <Col xs={12} md={6} className="d-flex justify-content-center mb-4 mb-md-0">
           <img
-            src="/images/essential-books-600.webp" // Ensure the path is correct
+            src="/images/essential-books.webp" // Ensure the path is correct
             alt="Stack of essential books for learning programming and computer science"
             className="img-fluid rounded about-img"
             width="600"
