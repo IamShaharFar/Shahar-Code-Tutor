@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Shahar-Code-Tutor/static/css/main.2f0cc905.css",
-    "main.js": "/Shahar-Code-Tutor/static/js/main.21ae7307.js",
+    "main.js": "/Shahar-Code-Tutor/static/js/main.2429f87b.js",
     "static/js/453.c482329b.chunk.js": "/Shahar-Code-Tutor/static/js/453.c482329b.chunk.js",
     "index.html": "/Shahar-Code-Tutor/index.html",
     "main.2f0cc905.css.map": "/Shahar-Code-Tutor/static/css/main.2f0cc905.css.map",
-    "main.21ae7307.js.map": "/Shahar-Code-Tutor/static/js/main.21ae7307.js.map",
+    "main.2429f87b.js.map": "/Shahar-Code-Tutor/static/js/main.2429f87b.js.map",
     "453.c482329b.chunk.js.map": "/Shahar-Code-Tutor/static/js/453.c482329b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f0cc905.css",
-    "static/js/main.21ae7307.js"
+    "static/js/main.2429f87b.js"
   ]
 }
