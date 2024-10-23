@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body, .App, .App-header, .brand, footer {
+  direction: rtl !important;
+  text-align: right !important;
+}

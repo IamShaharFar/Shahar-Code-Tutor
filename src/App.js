@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import { Helmet } from 'react-helmet-async';
+import AccessibilityButton from './components/AccessibilityButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='' dir="rtl">
+      <Helmet>
+        <title>שחר - מורה פרטי למדעי המחשב והנדסת תוכנה</title>
+        <meta
+          name="description"
+          content="מורה פרטי למחשבים והנדסת תוכנה - שיעורים פרטיים בזום, עם דגש על פיתוח מיומנויות למידה עצמאית והכנה למבחנים."
+        />
+        <meta name="keywords" content="מורה פרטי, שיעורי מחשבים, הנדסת תוכנה, שיעורי זום, למידה עצמאית, תכנות" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Testimonials />
+      <Contact />
+      <Footer />
+      <AccessibilityButton/>
     </div>
   );
 }
