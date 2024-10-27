@@ -11,7 +11,8 @@ function Services() {
             <Card.Body>
               <Card.Title>שיעור פרטי</Card.Title>
               <Card.Text>
-                עלות שיעור פרטי: 80 ₪ לתלמיד.
+                עלות שיעור פרטי: <strong>100 ₪</strong> לתלמיד.<br />
+                <strong>אורך השיעור:</strong> שעה.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -21,7 +22,8 @@ function Services() {
             <Card.Body>
               <Card.Title>שני תלמידים</Card.Title>
               <Card.Text>
-                עלות לכל תלמיד: 70 ₪ (הנחה של 10 ₪ לתלמיד).
+                עלות לכל תלמיד: <strong>90 ₪</strong> (הנחה של <strong>10%</strong>).<br />
+                <strong>אורך השיעור:</strong> שעה.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -31,7 +33,8 @@ function Services() {
             <Card.Body>
               <Card.Title>שלושה תלמידים</Card.Title>
               <Card.Text>
-                עלות לכל תלמיד: 60 ₪ (הנחה של 20 ₪ לתלמיד).
+                עלות לכל תלמיד: <strong>80 ₪</strong> (הנחה של <strong>20%</strong>).<br />
+                <strong>אורך השיעור:</strong> שעה.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -41,7 +44,8 @@ function Services() {
             <Card.Body>
               <Card.Title>עד 3 תלמידים בלבד</Card.Title>
               <Card.Text>
-                שיעור מותאם אישית עם הנחות מיוחדות.
+                שיעור מותאם אישית עם הנחות מיוחדות.<br />
+                <strong>אורך השיעור:</strong> שעה.
               </Card.Text>
             </Card.Body>
           </Card>

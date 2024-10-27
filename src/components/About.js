@@ -1,28 +1,44 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import me from '../images/me.jpg';
 
 function About() {
   return (
     <Container id="about" className="my-5">
       <Row className="align-items-center">
-        <Col xs={12} md={6} className="d-flex justify-content-center mb-4 mb-md-0">
+        <Col
+          xs={12}
+          md={6}
+          className="d-flex justify-content-center mb-4 mb-md-0"
+        >
           <img
-            src="/images/essential-books.webp" // Ensure the path is correct
-            alt="Stack of essential books for learning programming and computer science"
-            className="img-fluid rounded about-img"
-            width="600"
-            height="400"
+            src={me}
+            alt="Shahar - Private Tutor for Computer Science and Software Engineering"
+            className="img-fluid rounded-circle"
+            style={{
+              width: '350px', 
+              height: '350px',
+              objectFit: 'cover',
+              objectPosition: '50% 0%', // Adjusts the position to focus on the center of the face
+            }}
           />
         </Col>
+
         <Col xs={12} md={6}>
           <h1>קצת עליי</h1>
           <p>
-            שחר, סטודנט למחשבים ובוגר מגמת הנדסת תוכנה, כאן כדי לעזור לך להצליח. אני מציע שיעורים פרטיים בזום עם דגש על:
+            אני שחר, סטודנט למדעי המחשב באוניברסיטה הפתוחה ומתכנת בנשמה. מאז התיכון אני עוסק בפיתוח תוכנה, עם אהבה למציאת פתרונות יצירתיים ולתכנות אלגוריתמי שמפשט בעיות מורכבות.
+          </p>
+          <p>
+            צברתי ניסיון מעשי בהתמחות בבית תוכנה ובבניית אתרים. אני מאמין בלמידה עצמאית וממוקדת, ורוצה לעזור לאחרים להצליח בעולם התכנות.
+          </p>
+          <p>
+            בשיעורים שלי נלמד להבין את החומר, לפתח חשיבה עצמאית, ולהתכונן בצורה מיטבית למבחנים ופרויקטים, עם דגש על:
           </p>
           <ul>
             <li>עזרה בעבודות הגשה</li>
             <li>פיתוח מיומנויות למידה עצמאית</li>
-            <li>הכנה מותאמת אישית למבחנים</li>
+            <li>הכנה ממוקדת למבחנים</li>
           </ul>
         </Col>
       </Row>

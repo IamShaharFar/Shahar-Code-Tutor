@@ -87,7 +87,7 @@ function Header() {
             </Helmet>
             <Navbar bg="dark" variant="dark" expand="lg" sticky="top" expanded={expanded}>
                 <Container>
-                    <Navbar.Brand href="#home" className="brand">
+                    <Navbar.Brand onClick={() => handleLinkClick('home')} className="brand cursor-pointer">
                         <FaLaptopCode className="brand-icon ms-2" /> {/* Added icon */}
                         <span className="brand-text">שחר - מורה פרטי</span>
                     </Navbar.Brand>
@@ -98,7 +98,7 @@ function Header() {
                                 בית
                             </Nav.Link>
                             <Nav.Link as="span" className="cursor-pointer" onClick={() => handleLinkClick('about')}>
-                                אודות
+                                קצת עליי
                             </Nav.Link>
                             <Nav.Link as="span" className="cursor-pointer" onClick={() => handleLinkClick('services')}>
                                 שיעורים

@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', message: '' });
   const [showAlert, setShowAlert] = useState(false);
   const [errors, setErrors] = useState({});
 
@@ -16,7 +16,6 @@ function Contact() {
   const validateForm = () => {
     const newErrors = {};
     if (!formData.name) newErrors.name = 'שדה זה הוא חובה';
-    if (!formData.email) newErrors.email = 'שדה זה הוא חובה';
     if (!formData.phone) newErrors.phone = 'שדה זה הוא חובה';
     if (!formData.message) newErrors.message = 'שדה זה הוא חובה';
     setErrors(newErrors);
@@ -31,7 +30,7 @@ function Contact() {
       .send('service_yh6nnn2', 'template_5ih8jbr', formData, 'zeyURu7y3uMtLH4lK')
       .then(() => {
         setShowAlert(true);
-        setFormData({ name: '', email: '', phone: '', message: '' });
+        setFormData({ name: '', phone: '', message: '' });
       })
       .catch((error) => {
         console.error('Failed to send message:', error);
@@ -49,32 +48,21 @@ function Contact() {
       {showAlert && <Alert variant="success">ההודעה נשלחה בהצלחה!</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name" className="mb-3">
-          <Form.Label>שם מלא</Form.Label>
+          <Form.Label>מה השם שלך?</Form.Label>
           <Form.Control
             type="text"
-            placeholder="הזן את שמך"
+            placeholder="הכנס שם"
             value={formData.name}
             onChange={handleInputChange}
             isInvalid={!!errors.name}
           />
           <Form.Control.Feedback type="invalid">{errors.name}</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group controlId="email" className="mb-3">
-          <Form.Label>כתובת דוא"ל</Form.Label>
-          <Form.Control
-            type="email"
-            placeholder={"הזן את כתובת הדוא\"ל שלך"}
-            value={formData.email}
-            onChange={handleInputChange}
-            isInvalid={!!errors.email}
-          />
-          <Form.Control.Feedback type="invalid">{errors.email}</Form.Control.Feedback>
-        </Form.Group>
         <Form.Group controlId="phone" className="mb-3">
-          <Form.Label>מספר טלפון</Form.Label>
+          <Form.Label>מה מספר הטלפון שלך?</Form.Label>
           <Form.Control
             type="text"
-            placeholder="הזן את מספר הטלפון שלך"
+            placeholder="הכנס מספר טלפון"
             value={formData.phone}
             onChange={handleInputChange}
             isInvalid={!!errors.phone}
@@ -82,11 +70,11 @@ function Contact() {
           <Form.Control.Feedback type="invalid">{errors.phone}</Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="message" className="mb-3">
-          <Form.Label>הודעה</Form.Label>
+          <Form.Label>מה ההודעה שלך?</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
-            placeholder="הזן את הודעתך"
+            placeholder="כתוב הודעה"
             value={formData.message}
             onChange={handleInputChange}
             isInvalid={!!errors.message}
