@@ -30,7 +30,7 @@
     "deploy": "gh-pages -d build",
     "remove": "gh-pages-clean"
   },
-  "homepage": "https://IamShaharFar.github.io/Shahar-Code-Tutor",
+  "homepage": "https://shahar-code-tutor.onrender.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
