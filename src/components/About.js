@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaPython, FaJsSquare } from 'react-icons/fa';
+import { SiCsharp } from 'react-icons/si'; // Import C# icon from Simple Icons
 import me from '../images/me.jpg';
 
 function About() {
@@ -16,7 +18,7 @@ function About() {
             alt="Shahar - Private Tutor for Computer Science and Software Engineering"
             className="img-fluid rounded-circle"
             style={{
-              width: '350px', 
+              width: '350px',
               height: '350px',
               objectFit: 'cover',
               objectPosition: '50% 0%', // Adjusts the position to focus on the center of the face
@@ -40,6 +42,14 @@ function About() {
             <li>פיתוח מיומנויות למידה עצמאית</li>
             <li>הכנה ממוקדת למבחנים</li>
           </ul>
+          <p className="mt-4">
+            אני מלמד בשפות ובמסגרות הבאות:
+          </p>
+          <div className="d-flex justify-content-start align-items-center">
+            <FaPython size={40} className="me-3 text-primary" title="Python" />
+            <FaJsSquare size={40} className="me-3 text-warning" title="JavaScript" />
+            <SiCsharp size={40} className="me-3 text-info" title="C#" /> {/* Added C# icon */}
+          </div>
         </Col>
       </Row>
     </Container>
