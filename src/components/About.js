@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaPython, FaJsSquare } from 'react-icons/fa';
 import { SiCsharp } from 'react-icons/si'; // Import C# icon from Simple Icons
-import me from '../images/me.webps';
+import me from '../images/me.webp'; //webp
 
 function About() {
   return (
