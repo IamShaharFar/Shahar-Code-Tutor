@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Helmet } from 'react-helmet-async';
 import AccessibilityButton from './components/AccessibilityButton';
+import AnnouncementPopup from './components/AnnouncementPopup';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       </Helmet>
       <Header />
       <Hero />
+      <AnnouncementPopup />
       <About />
       <Services />
       <Testimonials />

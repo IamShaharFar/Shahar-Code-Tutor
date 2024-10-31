@@ -2,51 +2,51 @@ import React, { useState, useEffect } from "react";
 import { FaUniversalAccess, FaWheelchair, FaRedo, FaTimes, FaPlus, FaMinus, FaTextHeight, FaArrowsAlt, FaCompressArrowsAlt, FaPalette, FaAdjust, FaUnderline, FaGripLines, FaPause, FaFont } from 'react-icons/fa';
 
 const AccessibilityButton = ({ Options }) => {
-    const initOptions = {
-        labels: {
-          resetTitle: "איפוס",
-          closeTitle: "סגור",
-          menuTitle: "תפריט נגישות",
-          increaseText: "הגדלת גודל טקסט",
-          decreaseText: "הקטנת גודל טקסט",
-          increaseLineHeight: "הגדלת גובה שורה",
-          decreaseLineHeight: "הקטנת גובה שורה",
-          increaseTextSpacing: "הגדלת מרווח טקסט",
-          decreaseTextSpacing: "הקטנת מרווח טקסט",
-          invertColors: "היפוך צבעים",
-          grayHues: "גווני אפור",
-          underlineLinks: "הדגשת קישורים",
-          bigCursor: "סמן גדול",
-          readingGuide: "מדריך קריאה",
-          disableAnimations: "ביטול אנימציות",
-          readableFont: "גופן קריא",
-        },
-        modules: {
-          increaseText: true,
-          decreaseText: true,
-          increaseLineHeight: true,
-          decreaseLineHeight: true,
-          increaseTextSpacing: true,
-          decreaseTextSpacing: true,
-          invertColors: true,
-          grayHues: true,
-          underlineLinks: true,
-          bigCursor: true,
-          readingGuide: true,
-          disableAnimations: true,
-          readableFont: true,
-        },
-        style: {
-          mode: "light",
-          icon: "access",
-          shape: "circle",
-          position: {
-            bottom: { size: 50 },
-            left: { size: 20 },
-            toRight: true,
-          },
-        },
-      };
+  const initOptions = {
+    labels: {
+      resetTitle: "איפוס",
+      closeTitle: "סגור",
+      menuTitle: "תפריט נגישות",
+      increaseText: "הגדלת גודל טקסט",
+      decreaseText: "הקטנת גודל טקסט",
+      increaseLineHeight: "הגדלת גובה שורה",
+      decreaseLineHeight: "הקטנת גובה שורה",
+      increaseTextSpacing: "הגדלת מרווח טקסט",
+      decreaseTextSpacing: "הקטנת מרווח טקסט",
+      invertColors: "היפוך צבעים",
+      grayHues: "גווני אפור",
+      underlineLinks: "הדגשת קישורים",
+      bigCursor: "סמן גדול",
+      readingGuide: "מדריך קריאה",
+      disableAnimations: "ביטול אנימציות",
+      readableFont: "גופן קריא",
+    },
+    modules: {
+      increaseText: true,
+      decreaseText: true,
+      increaseLineHeight: true,
+      decreaseLineHeight: true,
+      increaseTextSpacing: true,
+      decreaseTextSpacing: true,
+      invertColors: true,
+      grayHues: true,
+      underlineLinks: true,
+      bigCursor: true,
+      readingGuide: true,
+      disableAnimations: true,
+      readableFont: true,
+    },
+    style: {
+      mode: "light",
+      icon: "access",
+      shape: "circle",
+      position: {
+        bottom: { size: 50 },
+        left: { size: 20 },
+        toRight: true,
+      },
+    },
+  };
   const [options, setOptions] = useState(Options || initOptions);
   const [menuVisible, setMenuVisible] = useState(false);
   const [textSize, setTextSize] = useState(
@@ -188,55 +188,55 @@ const AccessibilityButton = ({ Options }) => {
 
   const increaseLineHeight = () => {
     setLineHeight((prevHeight) => {
-        const newHeight = prevHeight + 0.2;
-        const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
-            "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
-        ));
-        textElements.forEach((element) => {
-            element.style.lineHeight = `${newHeight}`;
-        });
-        return newHeight;
+      const newHeight = prevHeight + 0.2;
+      const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
+        "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
+      ));
+      textElements.forEach((element) => {
+        element.style.lineHeight = `${newHeight}`;
+      });
+      return newHeight;
     });
-};
+  };
 
-const decreaseLineHeight = () => {
+  const decreaseLineHeight = () => {
     setLineHeight((prevHeight) => {
-        const newHeight = prevHeight - 0.2;
-        const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
-            "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
-        ));
-        textElements.forEach((element) => {
-            element.style.lineHeight = `${newHeight}`;
-        });
-        return newHeight;
+      const newHeight = prevHeight - 0.2;
+      const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
+        "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
+      ));
+      textElements.forEach((element) => {
+        element.style.lineHeight = `${newHeight}`;
+      });
+      return newHeight;
     });
-};
+  };
 
-const increaseTextSpacing = () => {
+  const increaseTextSpacing = () => {
     setTextSpacing((prevSpacing) => {
-        const newSpacing = prevSpacing + 0.1;
-        const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
-            "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
-        ));
-        textElements.forEach((element) => {
-            element.style.letterSpacing = `${newSpacing}em`;
-        });
-        return newSpacing;
+      const newSpacing = prevSpacing + 0.1;
+      const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
+        "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
+      ));
+      textElements.forEach((element) => {
+        element.style.letterSpacing = `${newSpacing}em`;
+      });
+      return newSpacing;
     });
-};
+  };
 
-const decreaseTextSpacing = () => {
+  const decreaseTextSpacing = () => {
     setTextSpacing((prevSpacing) => {
-        const newSpacing = prevSpacing - 0.1;
-        const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
-            "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
-        ));
-        textElements.forEach((element) => {
-            element.style.letterSpacing = `${newSpacing}em`;
-        });
-        return newSpacing;
+      const newSpacing = prevSpacing - 0.1;
+      const textElements = filterOutAccessibilityOptions(document.querySelectorAll(
+        "h1, h2, h3, h4, h5, h6, p, li, td, th, span, a, label, input, textarea, button"
+      ));
+      textElements.forEach((element) => {
+        element.style.letterSpacing = `${newSpacing}em`;
+      });
+      return newSpacing;
     });
-};
+  };
 
 
   const invertColors = () => {
@@ -373,7 +373,7 @@ const decreaseTextSpacing = () => {
   }
   
   .accessibility-button {
-      background-color: #007bff;
+      background-color: #05a6ed;
       color: #fff;
       border: none;
       border-radius: 50%;
@@ -500,32 +500,25 @@ const decreaseTextSpacing = () => {
   }
   `;
 
-return (
+  return (
     <div className={`accessibility-menu`} dir="rtl">
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossOrigin="anonymous"
-      />
       <style>{cssStyle}</style>
       <button
-        className={`accessibility-button ${
-          options.style.shape === "rectangle" ? "rectangle" : ""
-        } `}
+        className={`accessibility-button ${options.style.shape === "rectangle" ? "rectangle" : ""
+          }`}
         onClick={toggleMenu}
       >
         {options.style.icon === "wheelchair" ? (
-          <FaWheelchair />
+          "🌐" // Wheelchair emoji
         ) : (
-          <FaUniversalAccess />
+          "♿" // Universal access emoji or any other appropriate emoji
         )}
       </button>
+
       {menuVisible && (
         <div
-          className={`accessibility-options ${menuVisible ? "visible" : ""} ${
-            options.style.mode === "dark" ? "dark" : ""
-          }`}
+          className={`accessibility-options ${menuVisible ? "visible" : ""} ${options.style.mode === "dark" ? "dark" : ""
+            }`}
         >
           <div className="exit-reset-buttons">
             <div className="button-container">
@@ -563,167 +556,162 @@ return (
           <div className="row  accessibility-options-buttons">
             {(options.modules.increaseText == null ||
               options.modules.increaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={increaseTextSize}>
-                  <FaPlus className="options-i" />
-                  {options.labels.increaseText != null
-                    ? options.labels.increaseText
-                    : "הגדלת גודל הטקסט"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={increaseTextSize}>
+                    <FaPlus className="options-i" />
+                    {options.labels.increaseText != null
+                      ? options.labels.increaseText
+                      : "הגדלת גודל הטקסט"}
+                  </button>
+                </div>
+              )}
             {(options.modules.decreaseText == null ||
               options.modules.decreaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={decreaseTextSize}>
-                  <FaMinus className="options-i" />
-                  {options.labels.decreaseText != null
-                    ? options.labels.decreaseText
-                    : "הקטנת גודל הטקסט"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={decreaseTextSize}>
+                    <FaMinus className="options-i" />
+                    {options.labels.decreaseText != null
+                      ? options.labels.decreaseText
+                      : "הקטנת גודל הטקסט"}
+                  </button>
+                </div>
+              )}
             {(options.modules.increaseText == null ||
               options.modules.increaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={increaseLineHeight}>
-                  <FaTextHeight className="options-i" />
-                  {options.labels.increaseLineHeight != null
-                    ? options.labels.increaseLineHeight
-                    : "הגדלת מרווח בין שורות"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={increaseLineHeight}>
+                    <FaTextHeight className="options-i" />
+                    {options.labels.increaseLineHeight != null
+                      ? options.labels.increaseLineHeight
+                      : "הגדלת מרווח בין שורות"}
+                  </button>
+                </div>
+              )}
             {(options.modules.decreaseText == null ||
               options.modules.decreaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={decreaseLineHeight}>
-                  <FaTextHeight className="options-i" />
-                  {options.labels.decreaseLineHeight != null
-                    ? options.labels.decreaseLineHeight
-                    : "הקטנת מרווח בין שורות"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={decreaseLineHeight}>
+                    <FaTextHeight className="options-i" />
+                    {options.labels.decreaseLineHeight != null
+                      ? options.labels.decreaseLineHeight
+                      : "הקטנת מרווח בין שורות"}
+                  </button>
+                </div>
+              )}
             {(options.modules.increaseText == null ||
               options.modules.increaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={increaseTextSpacing}>
-                  <FaArrowsAlt className="options-i" />
-                  {options.labels.increaseTextSpacing != null
-                    ? options.labels.increaseTextSpacing
-                    : "הגדלת מרווח בין אותיות"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={increaseTextSpacing}>
+                    <FaArrowsAlt className="options-i" />
+                    {options.labels.increaseTextSpacing != null
+                      ? options.labels.increaseTextSpacing
+                      : "הגדלת מרווח בין אותיות"}
+                  </button>
+                </div>
+              )}
             {(options.modules.decreaseText == null ||
               options.modules.decreaseText === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={decreaseTextSpacing}>
-                  <FaCompressArrowsAlt className="options-i" />
-                  {options.labels.decreaseTextSpacing != null
-                    ? options.labels.decreaseTextSpacing
-                    : "הקטנת מרווח בין אותיות"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={decreaseTextSpacing}>
+                    <FaCompressArrowsAlt className="options-i" />
+                    {options.labels.decreaseTextSpacing != null
+                      ? options.labels.decreaseTextSpacing
+                      : "הקטנת מרווח בין אותיות"}
+                  </button>
+                </div>
+              )}
             {(options.modules.invertColors == null ||
               options.modules.invertColors === true) && (
-              <div className="col-6">
-                <button
-                  className={`btn ${
-                    invertColorsActive == true
-                      ? "btn-info active"
-                      : "btn-primary"
-                  }`}
-                  onClick={invertColors}
-                >
-                  <FaPalette className="options-i" />
-                  {options.labels.invertColors != null
-                    ? options.labels.invertColors
-                    : "היפוך צבעים"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button
+                    className={`btn ${invertColorsActive == true
+                        ? "btn-info active"
+                        : "btn-primary"
+                      }`}
+                    onClick={invertColors}
+                  >
+                    <FaPalette className="options-i" />
+                    {options.labels.invertColors != null
+                      ? options.labels.invertColors
+                      : "היפוך צבעים"}
+                  </button>
+                </div>
+              )}
             {(options.modules.grayHues == null ||
               options.modules.grayHues === true) && (
-              <div className="col-6">
-                <button
-                  className={`btn ${
-                    grayHuesActive == true ? "btn-info active" : "btn-primary"
-                  }`}
-                  onClick={grayHues}
-                >
-                  <FaAdjust className="options-i" />
-                  {options.labels.grayHues != null
-                    ? options.labels.grayHues
-                    : "גווני אפור"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button
+                    className={`btn ${grayHuesActive == true ? "btn-info active" : "btn-primary"
+                      }`}
+                    onClick={grayHues}
+                  >
+                    <FaAdjust className="options-i" />
+                    {options.labels.grayHues != null
+                      ? options.labels.grayHues
+                      : "גווני אפור"}
+                  </button>
+                </div>
+              )}
             {(options.modules.underlineLinks == null ||
               options.modules.underlineLinks === true) && (
-              <div className="col-6">
-                <button
-                  className={`btn ${
-                    underlineLinksActive == true
-                      ? "btn-info active"
-                      : "btn-primary"
-                  }`}
-                  onClick={underlineLinks}
-                >
-                  <FaUnderline className="options-i" />
-                  {options.labels.underlineLinks != null
-                    ? options.labels.underlineLinks
-                    : "קו תחתי לקישורים"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button
+                    className={`btn ${underlineLinksActive == true
+                        ? "btn-info active"
+                        : "btn-primary"
+                      }`}
+                    onClick={underlineLinks}
+                  >
+                    <FaUnderline className="options-i" />
+                    {options.labels.underlineLinks != null
+                      ? options.labels.underlineLinks
+                      : "קו תחתי לקישורים"}
+                  </button>
+                </div>
+              )}
             {(options.modules.readingGuide == null ||
               options.modules.readingGuide === true) && (
-              <div className="col-6">
-                <button
-                  className={`btn ${
-                    readingGuideActive == true
-                      ? "btn-info active"
-                      : "btn-primary"
-                  }`}
-                  onClick={toggleReadingGuide}
-                >
-                  <FaGripLines className="options-i" />
-                  {options.labels.readingGuide != null
-                    ? options.labels.readingGuide
-                    : "קו מדריך לקריאה"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button
+                    className={`btn ${readingGuideActive == true
+                        ? "btn-info active"
+                        : "btn-primary"
+                      }`}
+                    onClick={toggleReadingGuide}
+                  >
+                    <FaGripLines className="options-i" />
+                    {options.labels.readingGuide != null
+                      ? options.labels.readingGuide
+                      : "קו מדריך לקריאה"}
+                  </button>
+                </div>
+              )}
             {(options.modules.disableAnimations == null ||
               options.modules.disableAnimations === true) && (
-              <div className="col-6">
-                <button className="btn btn-primary" onClick={suppressAnimations}>
-                  <FaPause className="options-i" />
-                  {options.labels.disableAnimations != null
-                    ? options.labels.disableAnimations
-                    : "הפסקת אנימציות"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button className="btn btn-primary" onClick={suppressAnimations}>
+                    <FaPause className="options-i" />
+                    {options.labels.disableAnimations != null
+                      ? options.labels.disableAnimations
+                      : "הפסקת אנימציות"}
+                  </button>
+                </div>
+              )}
             {(options.modules.readableFont == null ||
               options.modules.readableFont === true) && (
-              <div className="col-6">
-                <button
-                  className={`btn ${
-                    readableFontActive ? "btn-info active" : "btn-primary"
-                  }`}
-                  onClick={readableFont}
-                >
-                  <FaFont className="options-i" />
-                  {options.labels.readableFont != null
-                    ? options.labels.readableFont
-                    : "גופן קריא"}
-                </button>
-              </div>
-            )}
+                <div className="col-6">
+                  <button
+                    className={`btn ${readableFontActive ? "btn-info active" : "btn-primary"
+                      }`}
+                    onClick={readableFont}
+                  >
+                    <FaFont className="options-i" />
+                    {options.labels.readableFont != null
+                      ? options.labels.readableFont
+                      : "גופן קריא"}
+                  </button>
+                </div>
+              )}
             {readingGuideActive && (
               <div id="reading-guide" className="reading-guide-line"></div>
             )}
@@ -732,7 +720,7 @@ return (
       )}
     </div>
   );
-  
+
 };
 
 export default AccessibilityButton;
