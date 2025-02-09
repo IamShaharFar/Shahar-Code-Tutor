@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaPython, FaJsSquare } from 'react-icons/fa';
+import { FaPython, FaJsSquare, FaJava } from 'react-icons/fa';
 import { SiCsharp } from 'react-icons/si'; // Import C# icon from Simple Icons
 import me from '../images/me.webp'; //webp
 
@@ -29,28 +29,38 @@ function About() {
         <Col xs={12} md={6}>
           <h1>קצת עליי</h1>
           <p style={{ fontSize: '1rem' }}>
-            אני שחר, סטודנט למדעי המחשב באוניברסיטה הפתוחה, מתכנת בנשמה וגם לוחם ומילואימניק. בשנה האחרונה עשיתי כ-100 ימי מילואים, כולל שתי סבבים. ה-7 באוקטובר היה רגע מאתגר במיוחד, ואני מצאתי את עצמי שוב מתגייס, תורם כמיטב יכולתי לצד החברים שלי. להיות שם, בתוך כל זה, חיזק בי את תחושת האחריות והשליחות לעזור ולהיות שם בשביל אחרים, גם בתחום המילואים וגם כמורה פרטי.
+            אני שחר, סטודנט למדעי המחשב באוניברסיטה הפתוחה ומתכנת בנשמה. אני מדריך בתוכנית ניצנים ללימוד תוכנה – תוכנית מצוינות טכנולוגית לתיכוניסטים שזכתה בפרס הרמטכ"ל, ובעל ניסיון מעשי בפיתוח תוכנה ובניית אתרים.
           </p>
           <p style={{ fontSize: '1rem' }}>
-            מאז התיכון אני עוסק בפיתוח תוכנה, עם אהבה למציאת פתרונות יצירתיים ולתכנות אלגוריתמי שמפשט בעיות מורכבות. צברתי ניסיון מעשי בהתמחות בבית תוכנה ובבניית אתרים. אני מאמין בלמידה עצמאית וממוקדת, ורוצה לעזור לאחרים להצליח בעולם התכנות.
+            כ-100 ימי מילואים בשנה האחרונה כלוחם חיזקו בי את היכולת להתמודד עם אתגרים מורכבים ולמצוא פתרונות יצירתיים – בדיוק כמו בתכנות. את הגישה הזו אני מביא גם לשיעורים, עם דגש על פיתוח חשיבה עצמאית ויצירתית.
           </p>
           <p style={{ fontSize: '1rem' }}>
-            בשיעורים שלי נלמד להבין את החומר, לפתח חשיבה עצמאית, ולהתכונן בצורה מיטבית למבחנים ופרויקטים, עם דגש על:
+            מאז התיכון אני חי את עולם הפיתוח, עם אהבה אמיתית למציאת פתרונות מחוץ לקופסה. אני מתמקד בלמידה מעשית ואפקטיבית שתעזור לך לא רק להבין את החומר, אלא לפתח חשיבה שתלווה אותך גם מחוץ לשיעור.
+          </p>
+          <p style={{ fontSize: '1rem' }}>
+            מה נלמד בשיעורים שלי?
           </p>
           <ul style={{ fontSize: '1rem' }}>
-            <li>עזרה בעבודות הגשה</li>
-            <li>פיתוח מיומנויות למידה עצמאית</li>
-            <li>הכנה ממוקדת למבחנים</li>
+            <li>פיתוח חשיבה אנליטית ופתרון בעיות.</li>
+            <li>הכנה ממוקדת למבחנים ובגרויות במדעי המחשב.</li>
+            <li>עזרה בעבודות הגשה ובפרויקטים מעשיים.</li>
+            <li>פיתוח מיומנויות ללמידה עצמאית.</li>
           </ul>
           <p className="mt-4" style={{ fontSize: '1rem' }}>
             אני מלמד בשפות ובמסגרות הבאות:
           </p>
-          <div className="d-flex justify-content-start align-items-center">
+          <div className="d-flex justify-content-start align-items-center mb-2">
             <FaPython size={40} className="me-3 text-primary" title="Python" />
             <FaJsSquare size={40} className="me-3 text-warning" title="JavaScript" />
-            <SiCsharp size={40} className="me-3 text-info" title="C#" /> {/* Added C# icon */}
+            <SiCsharp size={40} className="me-3 text-info" title="C#" />
+            <FaJava size={40} className="me-3 text-danger" title="Java" />
           </div>
+          <p style={{ fontSize: '1rem', fontWeight: 'bold' }}>
+  אני מזמין אותך לשיעור ניסיון – בוא נבנה יחד את הדרך שלך להצלחה במדעי המחשב.
+</p>
+
         </Col>
+
       </Row>
     </Container>
   );
